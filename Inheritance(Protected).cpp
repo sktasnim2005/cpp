@@ -14,7 +14,7 @@ class child : protected parent{
          cout<<"Name = "<<name<<endl;
          cout<<"ID = "<<id<<endl;
          //cout<<"pin = "<<pin<<endl;
-         cout<<"Z is private"<<endl;
+         cout<<"pin is private"<<endl;
     }
 };
 
