@@ -7,13 +7,13 @@ class A
   protected:
     int pr;
   public:
-    friend void fun(A &obj);
      void setPrivate(int x){
         pv=x;
      }
      void setProtected(int x){
         pr=x;
      }
+     friend void fun(A &obj);
 };
 void fun(A &obj){
  cout<<"Private value = "<<obj.pv<<endl;
