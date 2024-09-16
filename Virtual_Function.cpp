@@ -1,59 +1,24 @@
 #include <iostream>
-
 using namespace std;
 
-class Base{
-
+class Base {
 public:
-
-virtual void Output(){
-
-cout << "Output Base class" << endl;
-
-}
-
-void Display(){
-
-cout << "Display Base class" << endl;
-
-}
-
+    virtual void show() {
+        cout << "Base class" << endl;
+    }
 };
 
-class Derived : public Base{
-
+class Derived : public Base {
 public:
-
-void Output(){
-
-cout << "Output Derived class" << endl;
-
-}
-
-void Display()
-
-{
-
-cout << "Display Derived class" << endl;
-
-}
-
+    void show() override {
+        cout << "Derived class" << endl;
+    }
 };
 
-int main(){
-
-Base* bpointr;
-
-Derived dpointr;
-
-bpointr = &dpointr;
-
-// virtual function binding
-
-bpointr->Output();
-
-// Non-virtual function binding
-
-bpointr->Display();
-
+int main() {
+    Base* b;
+    Derived d;
+    b = &d;
+    b->show(); // Calls Derived's show()
+    return 0;
 }
