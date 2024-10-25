@@ -30,7 +30,7 @@ int main() {
         M[i+m] = B[i];
     }
     cout<<endl;
-   cout<<"A rray M = ";
+   cout<<"Array M = ";
    for (int i = 0; i < m+n; i++) {
         cout<< M[i]<<" ";
     }
